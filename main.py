@@ -16,8 +16,8 @@ def get_short_url(long_url):
         data=bytes(data, 'utf8')
     )
     with urlopen(req, timeout=60) as res:
-        print(str(res.read(), 'utf8'))
+        return str(res.read(), 'utf8')
 
 
 if __name__ == '__main__':
-    get_short_url("https://www.baidu.com")
+    print(get_short_url("https://www.baidu.com"))
